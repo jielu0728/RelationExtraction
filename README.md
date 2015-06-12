@@ -10,3 +10,7 @@ getrelation  :  pour trouver la matrice "feature"
 relation  :  détaille de "feature"
 
 result  :  les noms de personnages, l'ordre est utilisé dans "feature" et clustering
+
+similarities  :  similarités obtenues par fichier "cluster"
+
+similarity  :  similarités obtenues par Word2Vec
