@@ -10,5 +10,3 @@ getrelation  :  pour trouver la matrice "feature"
 relation  :  détaille de "feature"
 
 result  :  les noms de personnages, l'ordre est utilisé dans "feature" et clustering
-
-text  :  A Game of Thrones
