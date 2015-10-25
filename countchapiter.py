@@ -14,6 +14,7 @@ for line in f:
 
 f.close()
 
+
 # distinguish those prefixes and suffixes
 similar = []
 for obj_1 in name:
@@ -26,6 +27,7 @@ for obj_1 in name:
 				found = 1
 	if found == 0:
 		similar.pop()
+
 
 def find_fullname(temp, name):
 	for obj in similar:
@@ -47,9 +49,12 @@ def distinguish(temp, name, chapiter, line, n):
 		chapiter[n].append(1)
 	return is_substring
 		
-
+DIR = './AGameOfThrones'
+f_num = len([fn for fn in os.listdir(DIR) if os.path.isfile(os.path.join(DIR, fn))])
+times = 0.
 for subdir, dirs, files in os.walk(location):
 	for f in files:
+		print str(round(times/f_num,3)*100)+'%\n'
 		text = open('./AGameOfThrones/'+f,'r')
 		n = 0      
 		for obj in name:
@@ -66,6 +71,8 @@ for subdir, dirs, files in os.walk(location):
 			n = n + 1
 			text.seek(0)
 		text.close()
+		times = times + 1
+
 
 
 for obj in chapiter:
